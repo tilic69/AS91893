@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Renewable Energy Resources</title>
+        <link href="/css/stylesheet.css" rel="stylesheet">
+        <link href="/css/sustain.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Create navigation bar -->
+        <header>
+            <div class="nav">
+                <!-- Create an unordered list with class
+                nav-items to contain our nav items. -->
+                <ul class="nav-items">
+                    <!-- Each nav item is an indivual button containing the nav item as a list item.
+                    This allows for easy formatting and lets them appear as a nav bar.
+                    The items are each styled individually with text-decoration to allow for their brand colours to be displayed
+                    as a line under them.
+                    The dropbtn class allows for the fading brand colors to display
+                    when you hover on a nav item. -->
+                    <li class="h" style="text-decoration: underline var(--yellow); text-underline-offset: 4px;">
+                        <div class="dropdown">
+                            <div class="dropbtn" style="background: var(--yellow);"></div>
+                            Overview
+                            <div class="dropdown-content">
+                                <a href="/pages/sustain-energy.html">Sustainable Energy</a>
+                                <a href="/pages/environment-impact.html">Environmental Impact</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="h" style="text-decoration: underline var(--green); text-underline-offset: 4px;">
+                        <div class="dropdown">
+                            <div class="dropbtn" style="background: var(--green);"></div>
+                            Mission
+                            <div class="dropdown-content">
+                                <a href="/pages/progress.html">Progress</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- The logo is placed in the middle of the nav bar as per design specifications.
+                    The logo is contained within it's own wrapper to allow for easy image manipulations. -->
+                    <a href="/index.html">
+                        <li class="logobox"><img class="logo" src="/img/logo.png" alt="Company Logo"></li>
+                    </a>
+                    
+                    <li class="h" style="text-decoration: underline var(--blue); text-underline-offset: 4px;">
+                        <div class="dropdown">
+                            <div class="dropbtn" style="background: var(--blue);"></div>
+                            Contribute
+                            <div class="dropdown-content">
+                                <a href="/pages/charity.html">Charity Programs</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="h" style="text-decoration: underline var(--turq); text-underline-offset: 4px;">
+                        <div class="dropdown">
+                            <div class="dropbtn" style="background: var(--turq);"></div>
+                            <a href="/pages/contact.html">Contact</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </header>
+
+
+
+        <!-- Create main body -->
+        <main class="main">
+            <h1>Sustainable</h1>
+            <div class="brandContainer">
+                <h1 class="brandtext">E</h1>
+                <h1 class="brandtext">N</h1>
+                <h1 class="brandtext">E</h1>
+                <h1 class="brandtext">R</h1>
+                <h1 class="brandtext">G</h1>
+                <h1 class="brandtext">Y</h1>
+            </div>
+            <br>
+            <div class="content">
+                <img class="example" src="/img/1.jpg">
+                <p>Sustainable energy refers to energy sources that are renewable, environmentally friendly, and have minimal negative impacts on ecosystems and human health. The goal of sustainable energy is to meet present-day energy needs without compromising the ability of future generations to meet their own needs. Here are some key points regarding sustainable energy:</p>
+            </div>
+            <div class="content">
+                <h1>1</h1>
+                <p>Sustainable energy primarily relies on renewable energy sources such as solar, wind, hydroelectric, biomass, and geothermal energy. These sources are naturally replenished and have minimal environmental impact compared to fossil fuels.</p>
+                <img class="example" src="/img/2.jpg">
+            </div>
+            <div class="content">
+                <img class="example" src="/img/3.png">
+                <p>Unlike fossil fuels, which release large amounts of greenhouse gases when burned, sustainable energy sources produce little to no greenhouse gas emissions. This helps mitigate climate change and reduce air pollution.</p>
+                <h1>2</h1>
+            </div>
+        </main>
+
+
+        <!-- Create footer -->
+        <footer class="footer">
+            <div class="left">
+                <a href="index.html"><img class="logoimg" src="/img/logo.png" alt="Company Logo"></a>
+                <img class="socialimg" src="/img/email.svg" alt="Email Icon">
+                <img class="socialimg" src="/img/twitter.svg" alt="Twitter Icon">
+            </div>
+
+            <div class="right">
+                <a href="/pages/contact.html"><p style="font-size: 175%;">CONTACT US</p></a>
+                <p>&copy; RENEWABLE ENERGIES</p>
+            </div>
+
+        </footer>
+    </body>
+    <script src="/js/main.js"></script>
+</html>

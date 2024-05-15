@@ -1,0 +1,385 @@
+/* Allows for more precise measurements of objects */
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+
+/* Set up the color palette to be used as variables
+Throughout the code. */
+
+:root {
+    --yellow: #FFE115;
+    --green: #04B45B;
+    --blue: #81D3EB;
+    --turq: #B5D334;
+}
+
+/* Initialize h1 and set the text to be responsive (vw) */
+
+h1 {
+    color: #000;
+    font-size: 2.5vw;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove the underlining and set the color to black */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* NAV/Header Styling */
+
+.nav {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    border-bottom: solid 2px var(--yellow);
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nav-items a:not(:first-child){
+    display: flex;
+}
+
+/* Set up the text to be used in the navbar
+and use it as a box at the same time.
+The .h class looks very convoluded but is entirely functional:
+Firstly, the class acts as the button itself in the navbar.
+Secondly, the class acts as the format for the font and text inside of it.
+Thirdly, the class changes shape to fix a variety of screen sizes. */
+
+.h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    flex-direction: row-reverse;
+
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    color: black;
+    cursor: pointer;
+
+    height: 100px;
+    width: 12vw;
+
+    margin: 0 5px 0 5px;
+    padding: 0 6px;
+    background: none;
+}
+
+/* Set up logo bounding box and the logo inside it */
+
+.logobox {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.logo {
+    width: 10vw;
+    transition-duration: 0.5s;
+    margin: 5px 40px;
+}
+
+/* Set the logo to become bigger/smaller if hovered over */
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+/* This dropdown code is taken from https://www.w3schools.com/css/css_dropdowns.asp
+and modified to fit our purposes */
+
+/* Transition is set to 0.35 seconds to create the smooth colour
+effect when the button is hovered over */
+
+.dropbtn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.35s ease-in-out;
+    z-index: -1;
+}
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    display: inline-block;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 15px 15px;
+    font-size: 75%;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Create the slowly increases the height of the colored overlay
+to create a smooth effect */
+.dropdown:hover .dropbtn {
+    height: 100%;
+}
+
+/* 
+
+INDEX Main Body Layout 
+
+*/
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+}
+
+#Change {
+    border-bottom: solid 2px black;
+    font-weight: 400;
+}
+
+/* This magical piece of code allows us to have
+alternating text colours without having to do
+individual styling for each letter */
+
+.brandContainer {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    
+    /* Set the text itself to be responsive (vw) and be larger than the
+    H1 text */
+
+    .brandtext {
+        font-size: 5.5vw;
+
+        &:nth-child(3n-1) {
+            color: var(--green);
+        }
+    
+        &:nth-child(3n-2) {
+            color: var(--blue);
+        }
+    
+        &:nth-child(3n-3) {
+            color: var(--turq);
+        }
+    }
+}
+
+/* Create the slideshow and all it's components as specified
+in design */
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 0
+}
+  
+.slideshow-container .slideimg {
+    width: 500px;
+    height: 250px;
+    margin: 0;
+    border-radius: 4%;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 65%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+/* Number text */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+/* The dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+/* Container for the dots so that they can appear next to eachother
+while still being responsive */
+
+.dots {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Make the dots indicate when they are being hovered on */
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Footer Layout */
+
+.footer {
+    color: #000;
+    background-color: #fff;
+    border-top: 2px solid var(--yellow);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+/* Create the container for the left part of the footer */
+
+.footer .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/* Create the container for the right part of the footer */
+
+.footer .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Set the footer's logo to be responsive (vw) */
+
+.footer .logoimg {
+    width: 7vw;
+    padding: 0 5px;
+}
+
+/* Set the social media icons to be responsive (vw) */
+
+.footer .socialimg {
+    width: 4vw;
+    padding: 0 5px;
+}
+
+/* Set the text used in the footer */
+
+.footer p {
+    font-family: 'Segoe UI';
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+}
+
+/* Responsive Layout */
+
+@media(max-width: 900px){
+    /* Footer Responsiveness */
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer .logoimg {
+        width: 15vw;
+    }
+
+    .footer .socialimg {
+        width: 10vw;
+    }
+}

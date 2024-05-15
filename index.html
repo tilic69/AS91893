@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Iteration Information:
+Slideshow Beginnings -->
+
+<!--TODO:
+D - 1) Fancy overlay CSS for navbar
+D - 2) Fix font size on for navbar
+D - 3) Fix logo hover CSS for navbar logo 
+4) Add fancy curved line under navbar container
+5) Slideshow
+
+-->
+    <head>
+        <title>Renewable Energy Resources</title>
+        <link href="/css/stylesheet.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Create navigation bar -->
+        <header>
+            <div class="nav">
+                <!-- Create an unordered list with class
+                nav-items to contain our nav items. -->
+                <ul class="nav-items">
+                    <!-- Each nav item is an indivual button containing the nav item as a list item.
+                    This allows for easy formatting and lets them appear as a nav bar.
+                    The items are each styled individually with text-decoration to allow for their brand colours to be displayed
+                    as a line under them.
+                    The dropbtn class allows for the fading brand colors to display
+                    when you hover on a nav item. -->
+                    <li class="h" style="text-decoration: underline var(--yellow); text-underline-offset: 4px;">
+                        <div class="dropdown">
+                            <div class="dropbtn" style="background: var(--yellow);"></div>
+                            Overview
+                            <div class="dropdown-content">
+                                <a href="/pages/sustain-energy.html">Sustainable Energy</a>
+                                <a href="/pages/environment-impact.html">Environmental Impact</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="h" style="text-decoration: underline var(--green); text-underline-offset: 4px;">
+                        <div class="dropdown">
+                            <div class="dropbtn" style="background: var(--green);"></div>
+                            Mission
+                            <div class="dropdown-content">
+                                <a href="/pages/progress.html">Progress</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- The logo is placed in the middle of the nav bar as per design specifications.
+                    The logo is contained within it's own wrapper to allow for easy image manipulations. -->
+                    <a href="/index.html">
+                        <li class="logobox"><img class="logo" src="/img/logo.png" alt="Company Logo"></li>
+                    </a>
+                    
+                    <li class="h" style="text-decoration: underline var(--blue); text-underline-offset: 4px;">
+                        <div class="dropdown">
+                            <div class="dropbtn" style="background: var(--blue);"></div>
+                            Contribute
+                            <div class="dropdown-content">
+                                <a href="/pages/charity.html">Charity Programs</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="h" style="text-decoration: underline var(--turq); text-underline-offset: 4px;">
+                        <div class="dropdown">
+                            <div class="dropbtn" style="background: var(--turq);"></div>
+                            <a href="/pages/contact.html">Contact</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </header>
+
+
+        <!-- Create main body -->
+        <main class="main">
+
+            <h1 id="Change">CHANGE HAPPENS WITH</h1>
+            <div class="brandContainer">
+                <h1 class="brandtext">Y</h1>
+                <h1 class="brandtext">O</h1>
+                <h1 class="brandtext">U</h1>
+            </div>
+
+            <div class="slideshow-container">
+                  <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img class="slideimg" src="/img/1.jpg" alt="Sustainable Energy Image">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img class="slideimg" src="/img/2.jpg" alt="Sustainable Energy Image">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img class="slideimg" src="/img/3.png" alt="Sustainable Energy Image">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- The dots/circles -->
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+                <br>
+            </div>
+
+        </main>
+
+
+        <!-- Create footer -->
+        <footer class="footer">
+            <div class="left">
+                <a href="/index.html"><img class="logoimg" src="/img/logo.png" alt="Company Logo"></a>
+                <img class="socialimg" src="/img/email.svg" alt="Email Icon">
+                <img class="socialimg" src="/img/twitter.svg" alt="Twitter Icon">
+            </div>
+
+            <div class="right">
+                <a href="/pages/contact.html"><p style="font-size: 175%;">CONTACT US</p></a>
+                <p>&copy; RENEWABLE ENERGIES</p>
+            </div>
+
+        </footer>
+    </body>
+    <script src="/js/main.js"></script>
+</html>

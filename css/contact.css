@@ -1,0 +1,41 @@
+/* Stylesheet for the "Environmental Impact" page */
+
+/* General formatting for the page and it's content */
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 0;
+}
+
+.brandContainer {
+    text-decoration: underline 0.2vw;
+    text-underline-offset: 1vw;
+    margin-top: 0;
+}
+
+/* Text and Image Formatting */
+
+.example {
+    width: 30vw;
+    border-radius: 5%;
+    margin: 0px;
+}
+
+h1 {
+    margin-left: 0;
+    margin-bottom: 15px;
+    line-height: 1;
+    padding: 0;
+}
+
+p {
+    font-size: 1.5vw;
+    margin: 0 3%;
+}
+
+.link {
+    color: var(--green);
+}
